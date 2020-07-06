@@ -42,8 +42,8 @@
   },
   "scripts": {
     "test": "echo \"No test specified\" && exit 0",
-    "lint": "eslint ./",
-    "start:dev": "NODE_ENV=development nodemon --exec babel-node server.js"
+    "lint": "eslint --fix ./",
+    "start:dev": "nodemon --exec babel-node server.js"
   },
   "pre-commit": [
     "lint",
