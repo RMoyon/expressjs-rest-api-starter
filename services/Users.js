@@ -1,5 +1,5 @@
 import errors from '../errors';
-import Users from '../models/User';
+import Users from '../models/Users';
 
 const getUsers = async (req, res) => {
   try {
@@ -12,7 +12,7 @@ const getUsers = async (req, res) => {
 
 const getUser = async (req, res) => {
   try {
-    const user = await Users.findByPk(req.param.id);
+    const user = await Users.findByPk(req.params.id);
 
     if (user) {
       return res.status(200).json(user);

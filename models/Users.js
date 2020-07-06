@@ -1,5 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../configs/database';
+import Messages from './Messages';
 
 class Users extends Model {}
 
@@ -17,9 +18,10 @@ Users.init({
   },
 }, {
   sequelize,
-  modelName: 'Users',
-  tableName: 'Users',
+  modelName: 'users',
 });
+
+Users.hasMany(Messages);
 
 // Create table if not already created
 Users.sync();
