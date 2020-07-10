@@ -24,7 +24,39 @@ const getUser = async (req, res) => {
   }
 };
 
+const create = async (req, res) => {
+  try {
+    const newUser = await Users.create({
+      username: req.body.username,
+      birthday: req.body.birthday,
+    });
+
+    return res.status(201).json(newUser);
+  } catch (error) {
+    return errors.error500(res, error);
+  }
+}
+
+const update = async (req, res) => {
+  try {
+    const user = await Users.update(
+      req.body,
+      {
+        where: {
+          id: req.params.id,
+        },
+      },
+    );
+
+    return res.status(200).json(user);
+  } catch (error) {
+    return errors.error500(res, error);
+  }
+}
+
 export default {
   getUsers,
   getUser,
+  create,
+  update,
 };

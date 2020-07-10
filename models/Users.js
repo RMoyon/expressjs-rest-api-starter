@@ -7,6 +7,7 @@ class Users extends Model {}
 Users.init({
   id: {
     type: DataTypes.INTEGER,
+    autoIncrement: true,
     primaryKey: true,
   },
   username: {
@@ -18,12 +19,8 @@ Users.init({
   },
 }, {
   sequelize,
-  modelName: 'users',
 });
 
 Users.hasMany(Messages);
-
-// Create table if not already created
-Users.sync();
 
 export default Users;

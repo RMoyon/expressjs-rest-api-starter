@@ -12,4 +12,7 @@ const sequelize = new Sequelize(
   },
 );
 
+// This is not the optimal way to synchronize your database, migrations files are far better
+sequelize.sync();
+
 export default sequelize;
