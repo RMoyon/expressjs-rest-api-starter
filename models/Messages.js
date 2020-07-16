@@ -6,6 +6,7 @@ class Messages extends Model {}
 Messages.init({
   id: {
     type: DataTypes.INTEGER,
+    autoIncrement: true,
     primaryKey: true,
   },
   text: {
