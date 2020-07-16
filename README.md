@@ -30,7 +30,3 @@ DB_NAME=default
 DB_USERNAME=root
 DB_PASSWORD=ChangeMe
 ```  
-
-# Contribution  
-
-If you want to contribute, you can create issues at https://github.com/RMoyon/expressjs-rest-api-starter/issues
