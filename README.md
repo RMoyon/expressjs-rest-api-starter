@@ -1,5 +1,5 @@
 # expressjs-rest-api-starter
-The purpose of this repository is to provide a usefull starter way to build a RESTful express-js application.  
+The purpose of this repository is to provide a usefull starting way to build a RESTful express-js application.  
 
 # Installation
 ## Get Started
